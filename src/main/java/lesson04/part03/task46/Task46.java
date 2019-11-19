@@ -20,12 +20,11 @@ package lesson04.part03.task46;
 public class Task46 {
 
   public static void main(String[] args) throws Exception {
-    //напишите тут ваш код
+    try {
 
-    method1();
+      method1();
 
-    //напишите тут ваш код
-
+    } catch (Exception1 e) {    }
   }
 
   public static void method1() throws Exception1, Exception2, Exception3 {
