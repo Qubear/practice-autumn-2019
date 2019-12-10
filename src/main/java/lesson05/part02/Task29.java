@@ -18,16 +18,20 @@ package lesson05.part02;
 
 public class Task29 {
 
-//    public static void main(String[] args) {
-//        CTO cto = new CTO();
-//        System.out.println(cto);
-//    }
-//
-//    public static interface Businessman {
-//        public void workHard();
-//    }
-//
-//    public static class CTO implements Businessman {
-//
-//    }
+    public static void main(String[] args) {
+        CTO cto = new CTO();
+        System.out.println(cto);
+    }
+
+    public static interface Businessman {
+        public void workHard();
+    }
+
+    public static class CTO extends Humen implements Businessman {
+
+    }
+    public static class Humen{
+        public void workHard(){}
+
+    }
 }

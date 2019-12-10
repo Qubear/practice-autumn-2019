@@ -50,35 +50,38 @@ public class Task05 {
     }
 
     public interface LivingPart {
-        boolean containsBones();
+        String containsBones();
     }
 
     public static class BodyPart implements LivingPart {
         private String name;
-
         public BodyPart(String name) {
             this.name = name;
         }
-
-        public boolean containsBones() {
-            return true;
+        public String containsBones() {
+            return "YES";
         }
-
         public String toString() {
-            return containsBones() ? name + " содержит кости" : name + " не содержит кости";
+            String s="";
+            if(this.containsBones().equals("YES"))
+                s=name + " содержит кости";
+            if(this.containsBones().equals("NO"))
+                s=name + " не содержит кости";
+            return s;
         }
     }
 
     public static class Finger extends BodyPart {
         private boolean isArtificial;
-
         public Finger(String name, boolean isArtificial) {
             super(name);
             this.isArtificial = isArtificial;
         }
-
-        public boolean containsBones() {
-            return super.containsBones() && !isArtificial;
+        public String containsBones() {
+            String s="NO";
+            if(super.containsBones().equals("YES") && !isArtificial)
+                s="YES";
+            return s;
         }
     }
 }

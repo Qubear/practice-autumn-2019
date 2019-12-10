@@ -28,37 +28,11 @@ public class Task01Test {
     }
 
     @Test
-    public void testOutput0(){
+    public void testOutput(){
         Task01.main(null);
         ByteArrayOutputStream outputArray = SystemOutGatewayUtil.getOutputArray(); //SystemOutGatewayUtil.getOutputArray();
-        Assert.assertTrue("Error Output",outputArray.toString().contentEquals("Hellooooooo!"));
-    }
-    @Test
-    public void testOutput1(){
-        Task01.main(null);
-        ByteArrayOutputStream outputArray = SystemOutGatewayUtil.getOutputArray(); //SystemOutGatewayUtil.getOutputArray();
-        Assert.assertTrue("Error Output Hello",outputArray.toString().contains("Hello"));
-    }
-    @Test
-    public void testOutput2(){
-        Task01.main(null);
-        ByteArrayOutputStream outputArray = SystemOutGatewayUtil.getOutputArray(); //SystemOutGatewayUtil.getOutputArray();
-        Assert.assertTrue("Error Output !",outputArray.toString().contains("!"));
+        Assert.assertTrue("Error Output",outputArray.toString().contentEquals("Helloooooo!"));
+
 
     }
-    @Test
-    public void testOutput12cimv(){
-        Task01.main(null);
-        Boolean f=false;
-        ByteArrayOutputStream outS = SystemOutGatewayUtil.getOutputArray();
-        String st = outS.toString();
-        if (st.length()==12)
-            f=true;
-
-        Assert.assertTrue("Error не 12 символов!",f);
-
-    }
-
 }
-
-

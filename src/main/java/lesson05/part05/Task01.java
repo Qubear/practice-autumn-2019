@@ -32,6 +32,9 @@ public class Task01 {
         Object getAllowedAction();
     }
 
-    public static class Clothes {
+    public static class Clothes implements Movable, Sellable, Discountable{
+        public boolean isMovable(){return true;}
+        public Object getAllowedAction(String name){ return new Object();}
+        public Object getAllowedAction(){ return new Object();}
     }
 }

@@ -31,19 +31,35 @@ public class Task08Test {
     }
 
     @Test
+    public void testKeyboardInput() {
+        boolean isInputExist = false;
+        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+            List<String> collect = stream.collect(Collectors.toList());
+            for (String s : collect) {
+                if (s.contains("nextInt()") || s.contains("nextLine()") || s.contains("readLine()")) {
+                    isInputExist = true;
+                    break;
+                }
+            }
+            Assert.assertFalse("Программа не должна получать числа с клавиатуры",isInputExist);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     public void testOutput() {
         Task08.main(null);
         String str, str1;
         ByteArrayOutputStream outputArray = SystemOutGatewayUtil.getOutputArray(); //SystemOutGatewayUtil.getOutputArray();
         str = outputArray.toString();
         Assert.assertTrue("Вывод не верен", outputArray.toString().contains("2"));
+
     }
 
     @Test
-    public void testMetod() {
+    public void testGetMetreFromCentimetre() {
         int actual = Task08.getMetreFromCentimetre(243);
         Assert.assertEquals("В 243 сантиметрах должно быть 2 метра", 2, actual);
     }
-
-
 }

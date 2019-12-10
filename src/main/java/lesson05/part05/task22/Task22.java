@@ -1,8 +1,13 @@
 package lesson05.part05.task22;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Закрепляем паттерн Singleton
- * 1. Найти пример реализации паттерна Singleton с ленивой реализацией(lazy initialization). Используй свой любимый поисковик(например google).
+ * 1. Найти пример реализации паттерна Singleton с ленивой реализацией(lazy initialization).
+ * Используй свой любимый поисковик(например google).
  * 2. По образу и подобию в отдельных файлах создай три класса синглтона Sun, Moon, Earth.
  * 3. Реализуй интерфейс Planet в классах Sun, Moon, Earth.
  * 4. В статическом блоке класса Solution вызови метод readKeyFromConsoleAndInitPlanet.
@@ -41,8 +46,23 @@ public class Task22 {
     public static Planet thePlanet;
 
     //add static block here - добавьте статический блок тут
+    static {
+        try {
+            readKeyFromConsoleAndInitPlanet();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-    public static void readKeyFromConsoleAndInitPlanet() {
+    public static void readKeyFromConsoleAndInitPlanet() throws IOException {
         // implement step #5 here - реализуйте задание №5 тут
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String c = bufferedReader.readLine();
+        if(c.equals(Planet.EARTH))
+            thePlanet = new Earth();
+        if(c.equals(Planet.MOON))
+            thePlanet = new Moon();
+        if(c.equals(Planet.SUN))
+            thePlanet = new Sun();
     }
 }

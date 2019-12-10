@@ -19,7 +19,23 @@ package lesson05.part02;
 
 public class Task09 {
     public static void main(String[] args) {
+        System.out.print(min(2.,3.));
 
+    }
+    public static int min(int a1,int a2){
+        if(a1<a2)
+            return a1;
+        return a2;
+    }
+    public static long min(long a1,long a2){
+        if(a1<a2)
+            return a1;
+        return a2;
+    }
+    public static double min(double a1,double a2){
+        if(a1<a2)
+            return a1;
+        return a2;
     }
 
     //Напишите тут ваши методы

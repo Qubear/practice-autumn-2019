@@ -17,22 +17,11 @@ package lesson05.part05;
  */
 
 public class Task13 {
-    public static void main(String[] args) {
-    }
+    public static void main(String[] args) {    }
 
-    public interface Runnable {
+    public interface Runnable {    }
 
-    }
+    public class Machine  implements Runnable {    }
 
-    public class Machine extends Object implements Runnable {
-        public Machine() {
-            super();
-        }
-    }
-
-    public class Car extends Machine implements Runnable {
-        public Car() {
-            super();
-        }
-    }
+    public class Car extends Machine {    }
 }

@@ -33,15 +33,19 @@ public class Task27 {
         void swim();
     }
 
-    public class Duck {
+    public class Duck implements CanFly,CanSwim{
+        public void fly(){}
+        public void swim(){}
 
     }
 
-    public class Penguin {
-
+    public class Penguin implements CanRun,CanSwim{
+        public  void  run(){}
+        public void swim(){}
     }
 
-    public class Toad {
+    public class Toad implements CanSwim{
+        public void swim(){}
 
     }
 }

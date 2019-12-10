@@ -17,8 +17,10 @@ package lesson05.part05.task23;
  */
 
 public class Task23 {
-    public static void main(String[] args) {
-
-    }
+    public static void main(String[] args) {    }
+    public Task23(String c){}
+    private Task23(int i){}
+    protected Task23(){}
+    Task23(double d){}
 }
 

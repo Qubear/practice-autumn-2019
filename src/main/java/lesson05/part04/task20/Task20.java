@@ -22,5 +22,11 @@ package lesson05.part04.task20;
  */
 public class Task20 {
     public static void main(String[] args) {
+        Singleton a = Singleton.getInstance();
+        Singleton b = Singleton.getInstance();
+        if(a==b)
+            System.out.print("true");
+        else
+            System.out.print("true");
     }
 }

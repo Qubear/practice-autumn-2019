@@ -33,8 +33,19 @@ public class Task14 {
         cleanAllApartments(apartments);
     }
 
-    public static void cleanAllApartments(List<Apartment> apartments) {
+    public static void cleanAllApartments(List<Apartment> apartList) {
         //написать тут вашу реализацию пунктов 1-4
+        Apartment apart = null;
+        for(int i=0;i<apartList.size();i++)
+        {
+            apart=apartList.get(i);
+            if(apart instanceof OneRoomApt)
+                ((OneRoomApt) apart).clean1Room();
+            if(apart instanceof TwoRoomApt)
+                ((TwoRoomApt) apart).clean2Rooms();
+            if(apart instanceof ThreeRoomApt)
+                ((ThreeRoomApt) apart).clean3Rooms();
+        }
     }
 
     static interface Apartment {

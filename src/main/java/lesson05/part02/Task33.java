@@ -26,10 +26,19 @@ public class Task33 {
         if (array == null || array.length == 0) {
             return new Pair<Integer, Integer>(null, null);
         }
-
+        Integer min=array[0];
+        Integer mini=0;
+        for(int i=0;i<array.length;i++)
+        {
+            if(array[i]<min)
+            {
+                min=array[i];
+                mini=i;
+            }
+        }
         //напишите тут ваш код
 
-        return new Pair<Integer, Integer>(0, 0);
+        return new Pair<Integer, Integer>(min, mini);
     }
 
 

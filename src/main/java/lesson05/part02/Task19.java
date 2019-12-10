@@ -34,19 +34,22 @@ public class Task19 {
     }
 
 
-    public class Human {
-
+    public class Human implements CanRun,CanSwim{
+        public void run(){}
+        public void swim(){}
     }
 
-    public class Duck {
-
+    public class Duck implements CanSwim,CanFly{
+        public void swim(){}
+        public void fly(){}
     }
 
-    public class Penguin {
-
+    public class Penguin implements CanSwim,CanRun{
+        public void swim(){}
+        public void run(){}
     }
 
-    public class Airplane {
-
+    public class Airplane implements CanFly{
+        public void fly(){}
     }
 }

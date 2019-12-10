@@ -19,6 +19,12 @@ public class Task14 {
     public static Map<Double, String> labels = new HashMap<Double, String>();
 
     public static void main(String[] args) {
+        labels.put(1.,"1");
+        labels.put(2.,"2");
+        labels.put(3.,"3");
+        labels.put(4.,"4");
+        labels.put(5.,"5");
+
         System.out.println(labels);
     }
 }

@@ -23,14 +23,21 @@ public class Task23 {
         System.out.println("The maximum is " + result.y);
     }
 
-    public static Pair<Integer, Integer> getMinimumAndMaximum(int[] inputArray) {
-        if (inputArray == null || inputArray.length == 0) {
+    public static Pair<Integer, Integer> getMinimumAndMaximum(int[] mas) {
+        if (mas == null || mas.length == 0) {
             return new Pair<Integer, Integer>(null, null);
         }
-
         // напишите тут ваш код
+        int max=mas[0],min=mas[0];
+        for(int i=1;i<mas.length;i++)
+        {
+            if(mas[i]<min)
+                min=mas[i];
+            if(mas[i]>max)
+                max=mas[i];
+        }
 
-        return new Pair<Integer, Integer>(0, 0);
+        return new Pair<Integer, Integer>(min,max);
     }
 
     public static class Pair<X, Y> {

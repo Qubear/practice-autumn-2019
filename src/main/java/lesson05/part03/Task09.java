@@ -20,4 +20,8 @@ package lesson05.part03;
 public class Task09 {
     public static void main(String[] args) throws Exception {
     }
+    interface CanMove{
+        double speed ();
+    }
+    interface CanFly extends CanMove{ double speed(CanFly f);}
 }

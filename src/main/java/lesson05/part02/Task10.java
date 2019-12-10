@@ -19,7 +19,23 @@ package lesson05.part02;
 
 public class Task10 {
     public static void main(String[] args) {
+        System.out.print(max(4.,-1.));
 
+    }
+    public static int max(int a1,int a2){
+        if(a1>a2)
+            return a1;
+        return a2;
+    }
+    public static long max(long a1,long a2){
+        if(a1>a2)
+            return a1;
+        return a2;
+    }
+    public static double max(double a1,double a2){
+        if(a1>a2)
+            return a1;
+        return a2;
     }
 
     //Напишите тут ваши методы

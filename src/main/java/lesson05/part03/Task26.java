@@ -1,5 +1,10 @@
 package lesson05.part03;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Сортировка четных чисел из файла
  * 1. Ввести имя файла с консоли.
@@ -32,7 +37,19 @@ package lesson05.part03;
  */
 
 public class Task26 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String c = reader.readLine();
+        //C:\Git3\l5p3t26.txt
+        FileInputStream file = new FileInputStream(c);
+        int i;
+        while ((i=file.read())!= -1){
+            c=""+(char)i;
+            int a = Integer.parseInt(c);
+            if((a%2)==0)
+            System.out.print(a);
+        }
+        file.close();
     }
 }

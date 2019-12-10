@@ -17,6 +17,8 @@ public class Task06 {
     public static void main(String[] args) {
 
     }
+    public void print (int v){}
+    public void print (String s){}
 
     //Напишите тут ваши методы
 }

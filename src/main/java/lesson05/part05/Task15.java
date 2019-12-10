@@ -1,5 +1,9 @@
 package lesson05.part05;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Статики-2
  * 1. В статическом блоке считайте две переменные с консоли А и В с типом int.
@@ -21,11 +25,22 @@ public class Task15 {
 
     public static final int MIN = min(A, B);
 
-    public static void main(String[] args) {
-        System.out.println(MIN);
+    public static void main(String[] args) throws IOException {
+        try{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String c = reader.readLine();
+        A=Integer.parseInt(c);
+        c = reader.readLine();
+        B=Integer.parseInt(c);
+        reader.close();
+        }catch (IOException er)
+        { }
+        System.out.println(min(A, B));
     }
 
     public static int min(int a, int b) {
-        return a < b ? a : b;
+        if(a<b)
+            return a;
+        return b;
     }
 }

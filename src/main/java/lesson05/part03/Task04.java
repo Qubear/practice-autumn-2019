@@ -24,6 +24,10 @@ public class Task04 {
     interface Updatable {
         void refresh();
     }
+    public class Screen implements Selectable,Updatable{
+        public void onSelect(){}
+        public void refresh(){}
+    }
 
     //напишите тут ваш класс
 }

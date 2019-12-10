@@ -28,23 +28,10 @@ public class Task02Test {
     }
 
     @Test
-    public void testOutput0(){
+    public void testOutput(){
         Task02.main(null);
         ByteArrayOutputStream outputArray = SystemOutGatewayUtil.getOutputArray(); //SystemOutGatewayUtil.getOutputArray();
         Assert.assertTrue("Error Output",outputArray.toString().contentEquals("Helloooooo!\nHelloooooo!\nHelloooooo!"));
-    }
-    @Test
-    public void testOutput1(){
-        Task02.main(null);
-        ByteArrayOutputStream outputArray = SystemOutGatewayUtil.getOutputArray(); //SystemOutGatewayUtil.getOutputArray();
-        Assert.assertTrue("Error Output Hello",outputArray.toString().contains("Hello"));
-    }
-    @Test
-    public void testOutput2(){
-        Task02.main(null);
-        ByteArrayOutputStream outputArray = SystemOutGatewayUtil.getOutputArray(); //SystemOutGatewayUtil.getOutputArray();
-        Assert.assertTrue("Error Output !",outputArray.toString().contains("!"));
-
     }
 
 }

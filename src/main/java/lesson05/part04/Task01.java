@@ -14,7 +14,7 @@ package lesson05.part04;
 
 public class Task01 {
     public static void main(String[] args) {
-        Cat cat = new Cat();
+        Cat cat = new TomCat();
 
         boolean isCat = cat instanceof Cat;
         boolean isMovable = cat instanceof CanMove;

@@ -22,11 +22,15 @@ package lesson05.part04.task08;
  */
 
 public class Task08 {
-//    public static void main(String[] args) {
-//        println(new WaterBridge());
-//        println(new SuspensionBridge());
-//    }
-//
+    public static void main(String[] args) {
+        println((Bridge) new WaterBridge());
+        println((Bridge) new SuspensionBridge());
+    }
+    public static void println(Bridge bridge){
+        System.out.print(bridge.getCarsCount());
+    }
+
     //add println method here
+
 }
 

@@ -17,5 +17,11 @@ public class Task08 {
 
     }
 
+    public static void print(int i){}
+    public static void print(Integer I){}
+    public static void print(String s){}
+    public static void print(double d){}
+    public static void print(float f){}
+
     //Напишите тут ваши методы
 }

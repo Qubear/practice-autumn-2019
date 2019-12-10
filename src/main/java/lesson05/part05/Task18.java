@@ -17,9 +17,14 @@ package lesson05.part05;
 */
 
 public class Task18 {
-  //  public static Cat cat;
+    public static Cat cat;
+    static  {
+        cat= new Cat();
+        cat.name="Tom";
+    }
 
     public static void main(String[] args) {
 
     }
+    public static class Cat{ public String name;}
 }

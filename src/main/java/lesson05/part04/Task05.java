@@ -13,16 +13,13 @@ package lesson05.part04;
  */
 
 public class Task05 {
-//    public static void main(String[] args) {
-//        Object obj = //Add your code here
-//
-//                Mouse mouse = (Mouse) obj;
-//        GrayMouse grayMouse = (GrayMouse) mouse;
-//        Jerry jerry = (Jerry) grayMouse;
-//
-//        printClasses(obj, mouse, grayMouse, jerry);
-//
-//    }
+    public static void main(String[] args) {
+        Object obj = new Jerry();//Add your code here
+        Mouse mouse = (Mouse) obj;
+        GrayMouse grayMouse = (GrayMouse) mouse;
+        Jerry jerry = (Jerry) grayMouse;
+        printClasses(obj, mouse, grayMouse, jerry);
+    }
 
     public static void printClasses(Object obj, Mouse mouse, GrayMouse grayMouse, Jerry jerry) {
         System.out.println(jerry.getClass().getSimpleName());

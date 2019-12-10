@@ -16,11 +16,15 @@ public class Task07 {
     public static void main(String[] args) throws Exception {
     }
 
-    interface SimpleObject<T> {
+    interface SimpleObject<T>  {
         SimpleObject<T> getInstance();
     }
 
-    class StringObject //допишите здесь ваш код
+    class StringObject<T> implements SimpleObject<String> //допишите здесь ваш код
     {
+        public SimpleObject<String> getInstance() {
+            SimpleObject<String> a = new StringObject<T>();
+            return a;
+        }
     }
 }

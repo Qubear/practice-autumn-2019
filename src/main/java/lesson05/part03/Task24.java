@@ -22,11 +22,10 @@ public class Task24 {
 
     public interface Animal {
         Color getColor();
-
         Integer getAge();
     }
 
-    public static class Fox {
+    public abstract class Fox {
         public String getName() {
             return "Fox";
         }

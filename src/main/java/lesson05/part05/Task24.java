@@ -27,11 +27,11 @@ package lesson05.part05;
 
 public class Task24 {
     static {
+        init();
         System.out.println("Static block");
     }
-
     {
-        System.out.println("Non-static block");
+        System.out.println("Non-static block");             //4_4
         printAllFields(this);
     }
 
@@ -40,11 +40,11 @@ public class Task24 {
     public String name = "First name";
 
     static {
-        init();
+
     }
 
     public Task24() {
-        System.out.println("Solution constructor");
+        System.out.println("Solution constructor");                 //8_8
         printAllFields(this);
     }
 
@@ -53,13 +53,13 @@ public class Task24 {
     }
 
     public static void main(String[] args) {
-        System.out.println("public static void main");
+        System.out.println("public static void main");                      //3_3
         Task24 s = new Task24();
     }
 
     public static void printAllFields(Task24 obj) {
         System.out.println("static void printAllFields");
-        System.out.println(obj.name);
         System.out.println(obj.i);
+        System.out.println(obj.name);
     }
 }

@@ -28,6 +28,10 @@ public class Task02 {
     }
 
     public static class Whale extends Cow {
+        @Override
+        public String getName() {
+            return "";
+        }
 
     }
 }

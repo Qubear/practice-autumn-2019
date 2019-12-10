@@ -1,5 +1,10 @@
 package lesson05.part04.task13;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
 /**
  * MovieFactory
  * Расширение функционала по аналогии, чтение с консоли:
@@ -31,13 +36,20 @@ package lesson05.part04.task13;
 public class Task13 {
     public static void main(String[] args) throws Exception {
         //ввести с консоли несколько ключей (строк), пункт 7
+        Movie mov = null;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String c = reader.readLine();
 
+        while("cartoon".equals(c) || "soapOpera".equals(c) || "thriller".equals(c)) {
+            mov = MovieFactory.getMovie(c);
+            System.out.println(mov.getClass().getSimpleName());
+            c = reader.readLine();
+        }
         /*
 8 Создать переменную movie класса Movie и для каждой введенной строки(ключа):
 8.1 получить объект используя MovieFactory.getMovie и присвоить его переменной movie
 8.2 вывести на экран movie.getClass().getSimpleName()
         */
-
     }
 
     static class MovieFactory {
@@ -49,18 +61,17 @@ public class Task13 {
             if ("soapOpera".equals(key)) {
                 movie = new SoapOpera();
             }
-
-            //напишите тут ваш код, пункты 5,6
+            if("cartoon".equals(key)) movie = new Cartoon();
+            if("thriller".equals(key)) movie = new Thriller();
 
             return movie;
         }
     }
-
     static abstract class Movie {
     }
-
     static class SoapOpera extends Movie {
     }
-
+    static class Cartoon extends Movie {}
+    static class Thriller extends Movie{}
     //Напишите тут ваши классы, пункт 3
 }

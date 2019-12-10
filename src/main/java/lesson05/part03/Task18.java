@@ -1,5 +1,7 @@
 package lesson05.part03;
 
+import java.io.*;
+
 /**
  * Чтение файла
  * 1. Считать с консоли имя файла.
@@ -15,7 +17,16 @@ package lesson05.part03;
  */
 
 public class Task18 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String c = reader.readLine();
+        //C:\Git3\l5p3t18.txt
+        FileInputStream file = new FileInputStream(c);
+        int i;
+        while ((i=file.read())!= -1){
+            System.out.print((char)i);
+        }
+        file.close();
     }
 }

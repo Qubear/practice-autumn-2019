@@ -24,9 +24,10 @@ public class Task13 {
         Color getColor();
     }
 
-    public static class Fox {
+    public static abstract class Fox implements Animal{
         public String getName() {
             return "Fox";
         }
     }
+
 }

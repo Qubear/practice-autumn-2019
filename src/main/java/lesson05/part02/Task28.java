@@ -37,7 +37,7 @@ public class Task28 {
         void workVeryHard();
     }
 
-    public static class Human {
+    public static class Human implements Worker,Businessman{
 
         public void workHard() {
         }

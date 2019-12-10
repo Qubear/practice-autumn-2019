@@ -24,15 +24,15 @@ public class Task18 {
 
     }
 
-    public class Cat {
+    public class Cat extends Pet{
 
     }
 
-    public class Car {
+    public class Car{
 
     }
 
-    public class Dog {
+    public class Dog extends Pet{
 
     }
 }

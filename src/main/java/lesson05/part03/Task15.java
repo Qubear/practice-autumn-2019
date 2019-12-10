@@ -37,4 +37,17 @@ public class Task15 {
     public interface Eat {
         void eat();
     }
+    public class Mouse implements Edible,Movable{
+        public void move(){}
+        public void beEaten(){}
+    }
+    public class Cat implements Edible,Eat,Movable{
+        public void move(){}
+        public void beEaten(){}
+        public void eat(){}
+    }
+    public class Dog implements Eat,Movable{
+        public void move(){}
+        public void eat(){}
+    }
 }

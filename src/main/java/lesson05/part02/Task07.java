@@ -16,8 +16,14 @@ package lesson05.part02;
 
 public class Task07 {
     public static void main(String[] args) {
+        int a=1;Integer b=2;
+        print(a);
+        print(b);
+
 
     }
+    public static void print (Integer i){System.out.print(i);}
+    public static void print (int i){System.out.print(i);}
 
     //Напишите тут ваши методы
 }

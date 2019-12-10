@@ -1,6 +1,8 @@
 package lesson05.part05;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Разные методы для разных типов
@@ -26,6 +28,21 @@ import java.io.IOException;
 public class Task19 {
     public static void main(String[] args) throws IOException {
         //напиште тут ваш код
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String c = bufferedReader.readLine();
+        while(!c.equals("exit")){
+            if(c.contains("."))
+                print(Double.parseDouble(c));
+            else if (Integer.parseInt(c)<128 && Integer.parseInt(c)>0)
+                print(((short)Integer.parseInt(c)));
+            else if(Integer.parseInt(c)>127 || Integer.parseInt(c)==0)
+                print(Integer.parseInt(c));
+            else
+                print(c);
+
+            c = bufferedReader.readLine();
+        }
     }
 
     public static void print(Double value) {

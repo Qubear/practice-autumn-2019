@@ -21,7 +21,7 @@ public class Task02 {
 
     public static void main(String[] args) {
         // Напишите здесь ваш код
-        System.out.print("Helloooooo!\nHelloooooo!\nHelloooooo!");
+        System.out.println("Helloooooo!\nHelloooooo!\nHelloooooo!");
 
     }
 }

@@ -13,10 +13,10 @@ package lesson05.part03;
  */
 
 public class Task03 {
-//    public static void main(String[] args) throws Exception {
-//        print(new Beer());
-//        print(new Cola());
-//    }
+    public static void main(String[] args) throws Exception {
+        print(new Beer());
+        print(new Cola());
+    }
 
     private static void print(Drink drink) {
         System.out.println(drink.getClass().getSimpleName());
@@ -26,9 +26,12 @@ public class Task03 {
         boolean isAlcoholic();
     }
 
-    public static class Beer {
+    public static class Beer implements  Drink{
+        @Override
+        public boolean isAlcoholic() {return  true;        }
     }
 
-    public static class Cola {
+    public static class Cola implements Drink{
+        public boolean isAlcoholic() {return  false;        }
     }
 }

@@ -27,21 +27,33 @@ package lesson05.part05;
 
 public class Task03 {
     public static void main(String[] args) {
-        //    new Task03.LuxuriousCar().printlnDesire();
-        //    new Task03.CheapCar().printlnDesire();
+            new Task03.LuxuriousCar().printlnDesire();
+            new Task03.CheapCar().printlnDesire();
         new Task03.Ferrari().printlnDesire();
         new Task03.Lanos().printlnDesire();
     }
 
-    public static class Ferrari {
+    public static class Ferrari extends LuxuriousCar{
         public void printlnDesire() {
             //add your code here
+            System.out.println("Я хочу ездить на Феррари");
         }
     }
 
-    public static class Lanos {
+    public static class Lanos extends CheapCar{
         public void printlnDesire() {
             //add your code here
+            System.out.println("Я хочу ездить на Ланосе");
+        }
+    }
+    public static class LuxuriousCar{
+        protected void printlnDesire() {
+            System.out.println("Я хочу ездить на роскошной машине");
+        }
+    }
+    public static class CheapCar{
+        protected void printlnDesire() {
+            System.out.println("Я хочу ездить на дешевой машине");
         }
     }
 

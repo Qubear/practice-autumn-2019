@@ -17,8 +17,6 @@ public class Task10 {
         add((short) 1, 2f);
         add(1, 2);
         add(2d, 2);
-     //   add("1", 2d);
-        add((byte) 1, 2d);
     }
 
     public static void add(int i, int j) {

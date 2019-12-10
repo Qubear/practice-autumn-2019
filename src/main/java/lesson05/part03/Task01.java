@@ -32,7 +32,11 @@ public class Task01 {
         void sleepOnTheFloor();
     }
 
-    public static class BeerLover {
-
+    public static class BeerLover implements Alcoholic{
+        @Override
+        public void sleepOnTheFloor() {}
+        public void askForMore(String message){}
+        public void sayThankYou(){}
+        public boolean isReadyToGoHome(){return READY_TO_GO_HOME;}
     }
 }

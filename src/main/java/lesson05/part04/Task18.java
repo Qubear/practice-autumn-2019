@@ -1,5 +1,6 @@
 package lesson05.part04;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +22,6 @@ public class Task18 {
 
     public static void main(String[] args) {
         initExceptions();
-
         for (Exception exception : exceptions) {
             System.out.println(exception);
         }
@@ -30,12 +30,28 @@ public class Task18 {
     private static void initExceptions() {   //the first exception
         try {
             float i = 1 / 0;
-
+        } catch (Exception e) {
+            exceptions.add(e);
+        }
+        try {
+            float [] mas= new float[5];
+            mas[5]=0;
+        } catch (Exception e) {
+            exceptions.add(e);
+        }
+        try{
+            String s="yg";
+            Integer.parseInt(s);
+        } catch (Exception e) {
+            exceptions.add(e);
+        }
+        try{
+            File fil = new File("74238.txt");
         } catch (Exception e) {
             exceptions.add(e);
         }
 
-        //напишите тут ваш код
+
 
     }
 }

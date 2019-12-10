@@ -19,6 +19,18 @@ public class Task17 {
     public static void main(String[] args) {
 
     }
+    public interface CanFly{
+        public void speed();
+        public void stop();
+    }
+    public interface CanRun{
+        public void speed();
+        public void stop();
+    }
+    public interface CanSwim{
+        public void speed();
+        public void stop();
+    }
 
 //add interfaces here - добавь интерфейсы тут
 

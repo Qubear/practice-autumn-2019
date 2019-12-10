@@ -24,7 +24,7 @@ public class Task19 {
 
     }
 
-    public class Cat {
+    public class Cat extends House{
 
     }
 
@@ -32,7 +32,7 @@ public class Task19 {
 
     }
 
-    public class Dog {
+    public class Dog extends House{
 
     }
 }

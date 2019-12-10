@@ -29,26 +29,74 @@ package lesson05.part04.task07;
  * 1. Класс Hen должен быть абстрактным.
  * 2. Класс Hen должен содержать абстрактный метод int getCountOfEggsPerMonth().
  * 3. В классе Hen должен быть реализован метод String getDescription(), который возвращает строку "Я - курица.".
- * 4. Классы RussianHen, UkrainianHen, MoldovanHen и BelarusianHen должны наследоваться от класса Hen и быть созданы в отдельных файлах.
- * 5. Классы RussianHen, UkrainianHen, MoldovanHen и BelarusianHen должны реализовывать метод getCountOfEggsPerMonth, который должен возвращать количество яиц в месяц от данного типа куриц.
- * 6. Классы RussianHen, UkrainianHen, MoldovanHen и BelarusianHen должны переопределять метод getDescription родительского класса, таким образом, чтобы возвращаемая ими строка имела вид: <getDescription() родительского класса> + < Моя страна - Sssss. Я несу N яиц в месяц.> где Sssss - название страны, а N - количество яиц в месяц.
+ * 4. Классы RussianHen, UkrainianHen, MoldovanHen и BelarusianHen
+ * должны наследоваться от класса Hen и быть созданы в отдельных файлах.
+ * 5. Классы RussianHen, UkrainianHen, MoldovanHen и BelarusianHen
+ * должны реализовывать метод getCountOfEggsPerMonth, который должен возвращать количество яиц в месяц от данного типа куриц.
+ * 6. Классы RussianHen, UkrainianHen, MoldovanHen и BelarusianHen
+ * должны переопределять метод getDescription родительского класса, таким образом,
+ * чтобы возвращаемая ими строка имела вид: <getDescription() родительского класса> + < Моя страна - Sssss. Я несу N яиц в месяц.> где Sssss - название страны, а N - количество яиц в месяц.
  * 7. Метод getHen должен быть реализован в классе HenFactory и должен возвращать тип кур для переданной в него страны.
  */
 
 public class Task07 {
-//    public static void main(String[] args) {
-//        Hen hen = HenFactory.getHen(Country.BELARUS);
-//        hen.getCountOfEggsPerMonth();
-//    }
-//
-//    static class HenFactory {
-//
-//        static Hen getHen(String country) {
-//            Hen hen = null;
-//            //напишите тут ваш код
-//            return hen;
-//        }
-//    }
+    public static void main(String[] args) {
+        Hen hen = HenFactory.getHen(Country.BELARUS);
+        hen.getCountOfEggsPerMonth();
+    }
 
+    static class HenFactory {
+        static Hen getHen(String country) {
+            Hen hen = null;
+            //напишите тут ваш код
+            if(country.equals( "Russia"))
+                hen = new RussianHen();
+            if(country.equals( "Ukraine"))
+                hen = new UkrainianHen();
+            if(country.equals( "Moldova"))
+                hen = new MoldovanHen();
+            if(country.equals( "Belarus"))
+                hen = new BelarusianHen();
+            return hen;
+        }
+    }
+    public  static abstract class Hen{
+        public abstract int getCountOfEggsPerMonth();
+        public String getDescription() {
+            return "Я - курица.";
+        }
+    }
+    public static class RussianHen extends Hen{
+        int kol=23;
+        String coun = "Russia";
+        public int getCountOfEggsPerMonth(){ return kol; }
+        public String getDescription() {
+            return "Я - курица. Моя страна - " + coun + ". Я несу " + kol + " яиц в месяц.";
+        }
+    }
+    public  static class UkrainianHen extends Hen{
+        int kol=17;
+        String coun = "Ukraine";
+        public int getCountOfEggsPerMonth(){ return kol; }
+        public String getDescription() {
+             return "Я - курица. Моя страна - " + coun + ". Я несу " + kol + " яиц в месяц.";
+        }
+    }
+    public  static class MoldovanHen extends Hen{
+        int kol=16;
+        String coun = "Moldova";
+        public int getCountOfEggsPerMonth(){ return kol; }
+        public String getDescription(){
+            return  "Я - курица. Моя страна - "+coun+". Я несу "+kol+" яиц в месяц.";
+        }
+    }
+    public  static class BelarusianHen extends Hen{
+        int kol=25;
+        String coun = "Belarus";
+        public int getCountOfEggsPerMonth(){ return kol; }
+        public String getDescription(){
+            return  "Я - курица. Моя страна - "+coun+". Я несу "+kol+" яиц в месяц.";
+        }
+    }
 
 }

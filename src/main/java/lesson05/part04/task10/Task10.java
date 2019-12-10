@@ -32,21 +32,40 @@ import java.io.InputStreamReader;
  */
 
 public class Task10 {
-//    public static void main(String[] args) throws Exception {
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//        Person person = null;
-//        String key = null;
-//
-//        //тут цикл по чтению ключей, пункт 1
-//        {
-//            //создаем объект, пункт 2
-//
-//            doWork(person); //вызываем doWork
-//
-//        }
-//    }
-//
-//    public static void doWork(Person person) {
-//        // пункт 3
-//    }
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        com.javarush.task.task13.task1301.task10.Person person = null;
+        String key = null;
+
+        String c = reader.readLine();
+        //тут цикл по чтению ключей, пункт 1
+        while (c.equals("user") || c.equals( "loser") || c.equals("coder") || c.equals( "proger"))
+        {
+            //создаем объект, пункт 2
+            if(c.equals("user"))
+                person = new com.javarush.task.task13.task1301.task10.Person.User();
+            if(c.equals( "loser"))
+                person = new com.javarush.task.task13.task1301.task10.Person.Loser();
+            if(c.equals("coder"))
+                person = new com.javarush.task.task13.task1301.task10.Person.Coder();
+            if(c.equals( "proger"))
+                person = new com.javarush.task.task13.task1301.task10.Person.Proger();
+
+            doWork(person); //вызываем doWork
+
+            c = reader.readLine();
+        }
+    }
+
+    public static void doWork(com.javarush.task.task13.task1301.task10.Person person) {
+        // пункт 3
+        if(person instanceof com.javarush.task.task13.task1301.task10.Person.User)
+            ((com.javarush.task.task13.task1301.task10.Person.User) person).live();
+        if(person instanceof com.javarush.task.task13.task1301.task10.Person.Loser)
+            ((com.javarush.task.task13.task1301.task10.Person.Loser) person).doNothing();
+        if(person instanceof com.javarush.task.task13.task1301.task10.Person.Coder)
+            ((com.javarush.task.task13.task1301.task10.Person.Coder) person).writeCode();
+        if(person instanceof com.javarush.task.task13.task1301.task10.Person.Proger)
+            ((com.javarush.task.task13.task1301.task10.Person.Proger) person).enjoy();
+    }
 }

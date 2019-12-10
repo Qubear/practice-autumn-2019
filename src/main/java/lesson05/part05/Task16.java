@@ -21,10 +21,26 @@ package lesson05.part05;
  * 5. В классе Solution должно быть объявлено поле ObjectVar типа Object.
  * 6. В классе Solution должно быть объявлено поле ExceptionVar типа Exception.
  * 7. В классе Solution должно быть объявлено поле StringVar типа String.
- * 8. Метод main должен выводить значения полей на экран(каждое с новой строки или через пробел) в заданном порядке. Инициализировать переменные не нужно.
+ * 8. Метод main должен выводить значения полей на экран(каждое с новой строки или через пробел) в заданном порядке.
+ * Инициализировать переменные не нужно.
  */
 
 public class Task16 {
+    public static int intVar =0;
+    public static double doubleVar =1.1;
+    public static Double DoubleVar = 2.2;
+    public static boolean booleanVar = true;
+    public static Object ObjectVar = new Object();
+    public static Exception ExceptionVar = new Exception();
+    public static String StringVar = " ";
     public static void main(String[] args) {
+
+        System.out.println(intVar );
+        System.out.println(doubleVar );
+        System.out.println(DoubleVar );
+        System.out.println(booleanVar );
+        System.out.println(ObjectVar );
+        System.out.println(ExceptionVar );
+        System.out.println(StringVar );
     }
 }

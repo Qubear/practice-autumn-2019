@@ -1,5 +1,10 @@
 package lesson05.part03;
 
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Писатель в файл с консоли
  * 1. Прочесть с консоли имя файла.
@@ -18,7 +23,18 @@ package lesson05.part03;
  */
 
 public class Task19 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String c = reader.readLine();
+        //C:\Git3\l5p3t18.txt
+        FileOutputStream file = new FileOutputStream(c,true);
+        c = reader.readLine();
+        while (!c.equals("exit")){
+            file.write("\n".getBytes());
+            file.write(c.getBytes());
+            c = reader.readLine();
+        }
+        file.close();
     }
 }

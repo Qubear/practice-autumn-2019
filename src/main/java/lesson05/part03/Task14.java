@@ -1,5 +1,7 @@
 package lesson05.part03;
 
+import java.awt.*;
+
 /**
  * Большая лисица — это такая лисица
  * 1. Исправь класс BigFox так, чтобы программа компилировалась.
@@ -14,27 +16,30 @@ package lesson05.part03;
 
 public class Task14 {
 
-//    public static void main(String[] args) throws Exception {
-//        Fox bigFox = new BigFox();
-//        System.out.println(bigFox.getName());
-//        System.out.println(bigFox.getColor());
-//
-//    }
-//
-//    public interface Animal {
-//        Color getColor();
-//    }
-//
-//    public static abstract class Fox implements Animal {
-//        public String getName() {
-//            return "Fox";
-//        }
-//    }
-//
-//    public static class BigFox {
-//        public Color() {
-//            return Color.GRAY;
-//        }
-//    }
+    public static void main(String[] args) throws Exception {
+        Fox bigFox = new BigFox();
+        System.out.println(bigFox.getName());
+        System.out.println(bigFox.getColor());
+
+    }
+
+    public interface Animal {
+        Color getColor();
+    }
+
+    public static abstract class Fox implements Animal {
+        public String getName() {
+            return "Fox";
+        }
+    }
+
+    public static class BigFox extends  Fox{
+        public Color Color() {
+            return Color.GRAY;
+        }
+        public  Color getColor(){
+            return Color();
+        }
+    }
 
 }

@@ -25,8 +25,12 @@ public class Task11 {
         printMainInfo(movable);
     }
 
-    public static void printMainInfo(Object object) {
+    public static void printMainInfo(Object o) {
         //напишите тут ваш код
+        if(o instanceof Drawable)
+            ((Drawable) o).draw();
+        if(o instanceof Movable)
+            ((Movable) o).move();
     }
 
     static interface Movable {

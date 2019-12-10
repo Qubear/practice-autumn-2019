@@ -21,7 +21,6 @@ public class Task07 {
         System.out.println("Заполняем объектами String");
         printMatrix(m, n, (Object) value);
     }
-
     public static void printMatrix(int m, int n, Object value) {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -30,4 +29,13 @@ public class Task07 {
             System.out.println();
         }
     }
+    public static void printMatrix(int m, int n, int value) { }
+    public static void printMatrix(String m, int n, int value) { }
+    public static void printMatrix(double m, int n, int value) { }
+    public static void printMatrix(double m, double n, int value) { }
+    public static void printMatrix(String m, double n, int value) { }
+    public static void printMatrix(int m, double n, String  value) { }
+    public static void printMatrix(String m, int n, String value) { }
+    public static void printMatrix(String m, String  n, String value) { }
+
 }

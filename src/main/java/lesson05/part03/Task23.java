@@ -24,7 +24,9 @@ public class Task23 {
         void refresh();
     }
 
-    class Screen {
+    class Screen implements Updatable{
+        public void onSelect(){}
+        public void refresh(){}
 
     }
 }

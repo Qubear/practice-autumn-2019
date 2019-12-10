@@ -22,12 +22,12 @@ public class Task11 {
      * 4. Метод getVolume(int, int, int) должен правильно возвращать количество воды, которое необходимо для наполнения бассейна в литрах.
      */
 
-    private static class Pool {
+    public static class Pool {
         final public int a = 25;
         final protected int b = 25;
         final private int c = 2;
 
-        public long getVolume(int a, int b, int c) {
+        public static long getVolume(int a, int b, int c) {
             //напишите тут ваш код
 
             return 1000*a*b*c;

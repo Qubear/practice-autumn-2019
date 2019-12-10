@@ -38,6 +38,10 @@ public class Task06 {
 
     public static void haveFun(Person person) {
         //напишите тут ваш код
+        if (person instanceof Dancer)
+            ((Dancer) person).dance();
+        if(person instanceof Player)
+            ((Player) person).play();
     }
 
     interface Person {
